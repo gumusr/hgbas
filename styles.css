@@ -1,0 +1,128 @@
+/* Temel vücut stili ve sayfa arka planı */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #ff6b6b, #f7b7a3); /* Şık bir gradient arka plan */
+    margin: 0;
+    padding: 0;
+    color: #333; 
+    box-sizing: border-box;
+}
+
+/* Sayfa ortasında yer alan ana container */
+.container {
+    width: 100%;
+    max-width: 500px; 
+    margin: 50px auto; 
+    padding: 40px;
+    background-color: #ffffff; 
+    border-radius: 15px; /* Yuvarlatılmış köşeler */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Derinlik hissi için gölge */
+    text-align: center;
+    transform: translateY(-50px);
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+/* Sayfa başlığı */
+h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* İsim ve Soyisim input alanları */
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    margin: 12px 0;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Input odaklanıldığında sınır rengini değiştirme */
+input[type="text"]:focus {
+    border-color: #ff6b6b;
+    outline: none;
+    background-color: #ffffff;
+}
+
+/* Arama butonu stili */
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #ff6b6b;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Buton üzerine gelindiğinde renk değişimi ve animasyon */
+button:hover {
+    background-color: #d75c5c;
+    transform: scale(1.05); /* Hover animasyonu */
+}
+
+/* Sonuç kutusu stili */
+#sonuc {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #ff6b6b;
+    display: none; /* İlk başta görünmesin */
+    animation: slideIn 0.5s forwards;
+}
+
+/* Geçiş Animasyonu: Fade In (Sayfa yüklenirken) */
+@keyframes fadeIn {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Sonuç kutusunun kayarak çıkması */
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Sayfa mobil uyumlu olacak şekilde stil ayarları */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 25px;
+        margin: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    input[type="text"] {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    #sonuc {
+        font-size: 16px;
+    }
+}
