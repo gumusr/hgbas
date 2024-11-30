@@ -1,10 +1,10 @@
 // Kişi verilerini burada doğrudan tanımlıyoruz
-const kisiVerisi = {
-    "Ahmet": { soyisim: "Yılmaz", bilgi: "Ahmet Yılmaz, yazılım geliştirici." },
-    "Ayşe": { soyisim: "Kara", bilgi: "Ayşe Kara, grafik tasarımcı." },
-    "Mehmet": { soyisim: "Çelik", bilgi: "Mehmet Çelik, sistem yöneticisi." },
-    "Ali": { soyisim: "Demir", bilgi: "Ali Demir, veritabanı yöneticisi." }
-};
+const kisiVerileri = [
+    { "İsim": "Ahmet", "Soyisim": "Yılmaz", "Email": "ahmet@example.com", "Telefon": "555-1234" },
+    { "İsim": "Mehmet", "Soyisim": "Öztürk", "Email": "mehmet@example.com", "Telefon": "555-5678" },
+    { "İsim": "Ayşe", "Soyisim": "Kaya", "Email": "ayse@example.com", "Telefon": "555-8765" },
+    { "İsim": "Fatma", "Soyisim": "Demir", "Email": "fatma@example.com", "Telefon": "555-4321" }
+];
 
 function ara() {
     // Kullanıcının girdiği isim ve soyisim değerlerini al
